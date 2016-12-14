@@ -18,15 +18,13 @@ public class TestLitecartLogin {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver","c:\\selenium\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("http://localhost:7080/litecart/admin");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @Test
     public void testHello() {
-
+        driver.get("http://localhost:7080/litecart/admin");
         driver.manage().window().maximize();
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");

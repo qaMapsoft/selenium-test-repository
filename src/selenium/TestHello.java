@@ -17,12 +17,12 @@ public class TestHello {
     @BeforeTest
     public void setUp() {
         driver = new ChromeDriver();
-        driver.get("http://selenium2.ru");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @Test
     public void testHello() {
+        driver.get("http://selenium2.ru");    	
         driver.manage().window().maximize();
     }
 
